@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Muonroi.Microservices.Template</id>
-    <version>1.9.2</version>
+    <version>1.9.3</version>
     <description>Muonroi Microservices Template - ASP.NET Core microservices solution template with BuildingBlock framework, featuring 3-Tier License Security, Service Discovery, Message Bus, gRPC, and Distributed Caching.</description>
     <authors>Muonroi</authors>
     <license type="expression">MIT</license>
