@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Muonroi.Microservices.Template</id>
+    <version>1.9.2</version>
+    <description>Muonroi Microservices Template - ASP.NET Core microservices solution template with BuildingBlock framework, featuring 3-Tier License Security, Service Discovery, Message Bus, gRPC, and Distributed Caching.</description>
+    <authors>Muonroi</authors>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/muonroi/MuonroiBuildingBlock</projectUrl>
+    <repository type="git" url="https://github.com/muonroi/MuonroiBuildingBlock" />
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>dotnet template aspnetcore microservices muonroi buildingblock grpc rabbitmq redis service-discovery</tags>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+  </metadata>
+  <files>
+    <file src="**\*" target="content" exclude="**\bin\**;**\obj\**;**\logs\**;**\*.db;**\*.db-shm;**\*.db-wal;**\*.user;**\*.suo;**\.vs\**;**\.vscode\**;**\.idea\**;**\*.nuspec" />
+  </files>
+</package>

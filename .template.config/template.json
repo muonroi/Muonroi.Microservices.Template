@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Muonroi",
+  "classifications": [ "Web", "Solution", "ASP.NET", "Muonroi", "Microservices" ],
+  "identity": "Muonroi.Microservices.Solution.CSharp",
+  "name": "Muonroi Microservices Solution",
+  "shortName": "mr-micro-sln",
+  "tags": { "language": "C#", "type": "solution" },
+  "preferNameDirectory": true,
+  "sourceName": "Muonroi.Microservices",
+  "primaryOutputs": [
+    {
+      "path": "Muonroi.Microservices.sln"
+    }
+  ],
+  "symbols": {
+    "ClassName": {
+      "type": "parameter",
+      "datatype": "text",
+      "shortName": "c",
+      "replaces": "Microservices",
+      "fileRename": "Microservices",
+      "displayName": "Base Name for Classes",
+      "description": "name of class: DbContext, Service, etc.",
+      "defaultValue": "Microservices"
+    }
+  }
+}
+

@@ -1,0 +1,47 @@
+services:
+  consul:
+    image: hashicorp/consul:latest
+    ports:
+      - "8500:8500"
+    networks:
+      - muonroi-network
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: Password@123
+      MYSQL_DATABASE: muonroi_db
+    ports:
+      - "3306:3306"
+    networks:
+      - muonroi-network
+
+  catalog-service:
+    build:
+      context: .
+      dockerfile: src/Services/Muonroi.Microservices.Catalog/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConsulConfigs__ConsulAddress=http://consul:8500
+      - DatabaseConfigs__ConnectionStrings__MySqlConnectionString=Server=mysql;Database=muonroi_db;Uid=root;Pwd=Password@123;
+    depends_on:
+      - consul
+      - mysql
+    networks:
+      - muonroi-network
+
+  gateway:
+    build:
+      context: .
+      dockerfile: src/Gateways/Muonroi.Microservices.Gateway/Dockerfile
+    ports:
+      - "5000:8080"
+    depends_on:
+      - consul
+      - catalog-service
+    networks:
+      - muonroi-network
+
+networks:
+  muonroi-network:
+    driver: bridge

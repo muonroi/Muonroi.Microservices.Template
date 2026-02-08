@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <NoBuild>true</NoBuild>
+    <EnableDefaultContentItems>false</EnableDefaultContentItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <TargetFramework>net9.0</TargetFramework>
+    <PackageId>Muonroi.Microservices.Template</PackageId>
+    <Title>Muonroi.Microservices.Template</Title>
+    <Authors>Muon Roi</Authors>
+    <Description>Microservices template for ASP.NET Core applications using Muonroi Building Block and YARP Gateway.</Description>
+    <PackageIcon>logo.jpg</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Version>1.8.1</Version>
+    <PackageType>Template</PackageType>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)..\..\Muonroi.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+    <None Include="LICENSE" Pack="true" PackagePath="\"/>
+    <None Include="images/logo.jpg" Pack="true" PackagePath="\"/>
+    <Content Include="**\*" Exclude="**\bin\**;**\obj\**;**\.vs\**;**\.git\**;**\.github\**;Muonroi.Microservices.csproj" />
+  </ItemGroup>
+</Project>
+
+
+
+
+
+
+
