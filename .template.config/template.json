@@ -8,6 +8,24 @@
   "tags": { "language": "C#", "type": "solution" },
   "preferNameDirectory": true,
   "sourceName": "Muonroi.Microservices",
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            ".git/**",
+            ".github/**",
+            "images/**",
+            "Properties/**",
+            "GlobalUsings.cs",
+            "Muonroi.Microservices.csproj",
+            "Muonroi.Microservices.Template.nuspec",
+            "Muonroi.snk"
+          ]
+        }
+      ]
+    }
+  ],
   "primaryOutputs": [
     {
       "path": "Muonroi.Microservices.sln"
