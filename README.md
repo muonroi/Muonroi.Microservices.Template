@@ -395,6 +395,12 @@ Ensure services use docker-compose network names:
 
 Always specify `-p` and startup project for each service separately.
 
+## Edition Notes
+
+- Template package is MIT.
+- Generated services run in Free mode by default (`LicenseConfigs:LicenseFilePath = null`).
+- If you turn on premium integrations (gRPC, message bus, distributed cache, enterprise audit/security flows), provide a paid Muonroi license with matching feature keys.
+
 ## License
 
 MIT License. See [LICENSE.txt](LICENSE.txt) for details.
