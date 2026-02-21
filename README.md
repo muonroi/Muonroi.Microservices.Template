@@ -1,7 +1,5 @@
 # Muonroi.Microservices.Template
 
-[![Ask DeepWiki](https://raw.githubusercontent.com/muonroi/MuonroiBuildingBlock/main/src/Muonroi.BuildingBlock/Images/deep-wiki.png)](https://deepwiki.com/muonroi/Muonroi.Microservices.Template)
-
 A .NET solution template for building distributed Microservices applications using ASP.NET Core, YARP Gateway, and the Muonroi.BuildingBlock library. Ideal for large-scale systems requiring independent scalability and deployment.
 
 ## Quick Start
@@ -53,8 +51,8 @@ dotnet new install Muonroi.Microservices.Template
 ### From source
 
 ```bash
-git clone https://github.com/muonroi/MuonroiBuildingBlock.git
-cd MuonroiBuildingBlock/src/Muonroi.Microservices.Template
+git clone <your-private-url>/Muonroi.Microservices.Template.git
+cd Muonroi.Microservices.Template
 dotnet new install ./
 ```
 
@@ -381,11 +379,14 @@ See [k8s/README.md](k8s/README.md) for Kubernetes manifests.
 
 ## Documentation
 
-- [Architecture Overview](../../docs/architecture-overview.md)
-- [Microservices Guide](../../docs/microservices-guide.md)
-- [API Gateway Guide](../../docs/gateway-guide.md)
-- [Appsettings Guide](../../docs/appsettings-guide.md)
-- [Docker & K8s Guide](../../docs/ci-cd-docker-k8s.md)
+Private docs are centralized in `Muonroi.Docs`:
+
+- [License Capability Model](https://github.com/muonroi/Muonroi.Docs/blob/main/docs/enterprise/license-capability-model.md)
+- [Control Plane MVP](https://github.com/muonroi/Muonroi.Docs/blob/main/docs/enterprise/control-plane-mvp.md)
+- [Enterprise Secure Profile (E2)](https://github.com/muonroi/Muonroi.Docs/blob/main/docs/enterprise/enterprise-secure-profile-e2.md)
+- [Enterprise Centralized Authorization (E3)](https://github.com/muonroi/Muonroi.Docs/blob/main/docs/enterprise/enterprise-centralized-authorization-e3.md)
+- [Enterprise Compliance (E4)](https://github.com/muonroi/Muonroi.Docs/blob/main/docs/enterprise/enterprise-compliance-e4.md)
+- [Enterprise Operations (E5)](https://github.com/muonroi/Muonroi.Docs/blob/main/docs/enterprise/enterprise-operations-e5.md)
 
 ## Troubleshooting
 
