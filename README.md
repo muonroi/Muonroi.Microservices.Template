@@ -67,12 +67,13 @@ dotnet new list | grep "mr-micro-sln"
 ### Create new project
 
 ```bash
-dotnet new mr-micro-sln -n <ProjectName>
+dotnet new mr-micro-sln -n <ProjectName> [--ui <angular|react|mvc|none>]
 ```
 
 | Parameter | Short | Description | Default |
 |-----------|-------|-------------|---------|
 | `--name` | `-n` | Solution/project name | (required) |
+| `--UiFramework` | `--ui` | Frontend shell scaffold (`angular`, `react`, `mvc`, `none`) | `none` |
 
 ### Examples
 
@@ -81,6 +82,9 @@ dotnet new mr-micro-sln -n <ProjectName>
 dotnet new mr-micro-sln -n ECommerceServices
 
 # Creates: CatalogService, Gateway, docker-compose
+
+# Create microservices solution with MVC shell starter
+dotnet new mr-micro-sln -n ECommerceServices --ui mvc
 ```
 
 ## Project Structure
