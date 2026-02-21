@@ -201,6 +201,34 @@ Toggle features per service:
 }
 ```
 
+### Enterprise Operations (E4/E5)
+
+For each service that needs enterprise management endpoints:
+
+```json
+{
+  "EnterpriseOps": {
+    "EnableComplianceEndpoints": false,
+    "EnableOperationsEndpoints": false
+  }
+}
+```
+
+When enabled in a service:
+- `EnableComplianceEndpoints`: maps `MapMComplianceEndpoints()`
+- `EnableOperationsEndpoints`: maps `MapMEnterpriseOperationsEndpoints()`
+
+Ops scripts included in `scripts/`:
+- `check-enterprise-upgrade-compat.ps1`
+- `check-enterprise-slo-gates.ps1`
+
+SLO presets included in `deploy/enterprise/slo-presets/`:
+- `balanced.json`
+- `strict.json`
+- `regulated.json`
+
+Note: if your `Muonroi.BuildingBlock` package version does not include E4/E5 endpoint extensions yet, these toggles are ignored safely.
+
 ## Database Migrations
 
 Each service manages its own database:
