@@ -82,6 +82,11 @@ Generated UI shells use Muonroi hybrid UI engine:
 - MVC runtime package: `Muonroi.Ui.Engine.Mvc`
 - Optional UI-kit adapter package: `@muonroi/ui-engine-primeng`
 
+Template boundary:
+- `Muonroi.Microservices.Template` keeps scaffold/wiring for `dotnet new`.
+- Shared UI runtime core is maintained in `Muonroi.Ui.Engine`.
+- Runtime verification should be executed on freshly generated projects under `_tmp/verify-runs`, not by treating template source as production app.
+
 Sync helper:
 
 ```bash
@@ -356,6 +361,27 @@ Services communicate via:
 - **gRPC Communication** - High-performance inter-service calls
 - **Health Checks** - Service health monitoring
 - **Distributed Tracing** - OpenTelemetry support
+
+## Rule Engine
+
+This template includes rule orchestration examples for real business workflows.
+
+### Quick Start
+
+See [Rule Engine Quick Start](docs/RULE_ENGINE_QUICKSTART.md).
+
+### Examples in this template
+
+- `src/Services/Muonroi.Microservices.Catalog/Rules/B2B/B2BRegistrationRules.cs`
+- `src/Services/Muonroi.Microservices.Catalog/Rules/ContainerValidationRule.cs`
+- `src/Services/Muonroi.Microservices.Catalog/Rules/ContainerExistenceRule.cs`
+- `src/Services/Muonroi.Microservices.Catalog/Rules/LoggingHook.cs`
+
+### Centralized docs
+
+- [Rule Engine Guide](https://github.com/muonroi/Muonroi.Docs/blob/main/docs/rule-engine-guide.md)
+- [Rule Engine Testing Guide](https://github.com/muonroi/Muonroi.Docs/blob/main/docs/rule-engine-testing-guide.md)
+- [Rule Engine Advanced Patterns](https://github.com/muonroi/Muonroi.Docs/blob/main/docs/rule-engine-advanced-patterns.md)
 
 ## Best Practices
 
